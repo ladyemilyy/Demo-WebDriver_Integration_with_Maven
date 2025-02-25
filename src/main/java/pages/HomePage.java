@@ -46,7 +46,7 @@ public class HomePage {
     }
 
     //link for key presses
-    public void KeyPressesPage clickKeyPressesLink(){
+    public KeyPressesPage clickKeyPressesLink(){
             clickLink("Key Presses");
             return new KeyPressesPage(driver);
     }

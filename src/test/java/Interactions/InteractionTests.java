@@ -1,6 +1,7 @@
 package Interactions;
 
 import base.BaseTests;
+import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
@@ -35,5 +36,12 @@ public class InteractionTests extends BaseTests {
         assertEquals(caption.getTitle(), "name: user1","Caption title incorrect");
         assertEquals(caption.getLinktext(), "View profile","Caption link text incorrect" );
         assertTrue(caption.getLink().endsWith("/users/1"), "Link incorrect");
+    }
+
+    @Test
+    public void testKeyPresses(){
+        var keyPressesPage = homepage.clickKeyPressesLink();
+        keyPressesPage.enterText("ABCD" + Keys.BACK_SPACE);
+        assertEquals(keyPressesPage.getResult(), "You entered: BACK_SPACE", "wrong key message");
     }
 }
