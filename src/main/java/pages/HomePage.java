@@ -31,5 +31,11 @@ public class HomePage {
     public DropdownPage clickDropdownLink(){
             clickLink("Dropdown");
             return new DropdownPage(driver);
+
+    }
+    //link for forgot password
+    public ForgotPasswordPage clickForgotPasswordLink(){
+            clickLink("Forgot Password");
+            return new ForgotPasswordPage(driver);
     }
 }

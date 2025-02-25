@@ -17,8 +17,11 @@ public class InteractionTests extends BaseTests {
         assertTrue(selectedOption.contains("Option 1"), "Option not selected");
     }
 
+    @Test
     public void testForgotPassword(){
-        var
+        var forgotPasswordPage = homepage.clickForgotPasswordLink();
+        forgotPasswordPage.sendEmailText();
+        forgotPasswordPage.clickRetrievePasswordButton();
     }
 
 }
