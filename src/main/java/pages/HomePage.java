@@ -45,4 +45,9 @@ public class HomePage {
             return new HoverPage(driver);
     }
 
+    //link for key presses
+    public void KeyPressesPage clickKeyPressesLink(){
+            clickLink("Key Presses");
+            return new KeyPressesPage(driver);
+    }
 }

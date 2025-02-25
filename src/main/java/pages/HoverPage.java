@@ -22,6 +22,7 @@ public class HoverPage {
     public FigureCaption hoverOverElements(int index){
         WebElement figure = driver.findElements(figureBox).get(index -1);
 
+        //introduce advanced interaction(hover) methods by using Actions class
         Actions actions = new Actions(driver);
         actions.moveToElement(figure).perform();
 
