@@ -8,8 +8,9 @@ import static org.testng.Assert.assertTrue;
 
 public class InteractionTests extends BaseTests {
 
+    //test for dropdown list selection
     @Test
-    public void testDropDdwn(){
+    public void testDropDown(){
         var dropDownpage = homepage.clickDropdownLink();
         dropDownpage.selectFromDropdown("Option 1");
         var selectedOption =dropDownpage.getSelectedOption();
@@ -17,6 +18,7 @@ public class InteractionTests extends BaseTests {
         assertTrue(selectedOption.contains("Option 1"), "Option not selected");
     }
 
+    //test for forgot password and email verification
     @Test
     public void testForgotPassword(){
         var forgotPasswordPage = homepage.clickForgotPasswordLink();
@@ -24,4 +26,14 @@ public class InteractionTests extends BaseTests {
         forgotPasswordPage.clickRetrievePasswordButton();
     }
 
+    //test for hovering over elements
+    @Test
+    public void testHover(){
+        var hoverPage = homepage.clickHoverLink();
+        var caption = hoverPage.hoverOverElements(1);
+        assertTrue(caption.isCaptionDisplayed(), "Caption is not displayed");
+        assertEquals(caption.getTitle(), "name: user1","Caption title incorrect");
+        assertEquals(caption.getLinktext(), "View profile","Caption link text incorrect" );
+        assertTrue(caption.getLink().endsWith("/users/1"), "Link incorrect");
+    }
 }

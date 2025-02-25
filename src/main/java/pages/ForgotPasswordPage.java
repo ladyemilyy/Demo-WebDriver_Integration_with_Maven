@@ -8,6 +8,7 @@ public class ForgotPasswordPage {
     private By emailField = By.id("email");
     private By retrieveButton = By.id("form_submit");
 
+    //constructor
     public ForgotPasswordPage(WebDriver driver){
         this.driver = driver;
     }
