@@ -39,6 +39,7 @@ public class HomePage {
             return new ForgotPasswordPage(driver);
     }
 
+    //link for hovers page
     public HoverPage clickHoverLink(){
             clickLink("Hovers");
             return new HoverPage(driver);
