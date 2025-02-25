@@ -9,12 +9,16 @@ import static org.testng.Assert.assertTrue;
 public class InteractionTests extends BaseTests {
 
     @Test
-    public void TestDropDdwn(){
+    public void testDropDdwn(){
         var dropDownpage = homepage.clickDropdownLink();
         dropDownpage.selectFromDropdown("Option 1");
         var selectedOption =dropDownpage.getSelectedOption();
         assertEquals(selectedOption.size(), 1, "Incorrect number of selections");
         assertTrue(selectedOption.contains("Option 1"), "Option not selected");
+    }
+
+    public void testForgotPassword(){
+        var
     }
 
 }
